@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>eureka-server-discovery</module>
         <module>user-provider-service</module>
     </modules>
 
