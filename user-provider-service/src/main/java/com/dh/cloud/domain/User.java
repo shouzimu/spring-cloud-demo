@@ -1,6 +1,6 @@
 package com.dh.cloud.domain;
 
-public class SysUser {
+public class User {
     private String id;
 
     private String name;
