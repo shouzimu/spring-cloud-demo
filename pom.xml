@@ -11,14 +11,18 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>eureka-server-discovery</module>
+        <module>server-discovery</module>
         <module>user-provider-service</module>
+        <module>user-ui</module>
+        <module>api-gateway</module>
+        <module>config-service</module>
+        <module>comment-provider-service</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Brixton.BUILD-SNAPSHOT</version>
+        <version>Camden.SR1</version>
         <relativePath/>
         <!-- lookup parent from repository -->
     </parent>
@@ -29,28 +33,12 @@
         <docker.plugin.version>0.4.11</docker.plugin.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>Brixton.BUILD-SNAPSHOT</version>
+                <version>Camden.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
