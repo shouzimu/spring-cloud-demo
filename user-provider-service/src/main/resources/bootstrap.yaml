@@ -3,19 +3,7 @@ spring:
     name: user-provider-service
   cloud:
     config:
-      uri: http://config:8888
-      profile: ${config.profile:dev}
-      name: user-provider-service
-
-server:
-  port: 8081
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-endpoints:
-  shutdown:
-    enabled: true
-  restart:
-    enabled: true
+      uri: http://configserver:8888
+      profile: dev,test
+encrypt:
+  failOnError: false
