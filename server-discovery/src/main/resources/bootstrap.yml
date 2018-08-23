@@ -1,3 +1,8 @@
 spring:
-  application:
-    name: discovery
+  cloud:
+    zookeeper:
+      discovery:
+        connect-string: localhost:2181
+        instancePort: 8761
+        enabled: true
+        register: true
