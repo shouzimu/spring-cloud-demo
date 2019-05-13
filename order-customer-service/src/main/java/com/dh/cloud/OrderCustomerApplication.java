@@ -1,17 +1,18 @@
 package com.dh.cloud;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
+@Slf4j
 @EnableDiscoveryClient
-public class UiApplication {
+@EnableFeignClients
+public class OrderCustomerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UiApplication.class, args);
+        SpringApplication.run(OrderCustomerApplication.class, args);
     }
-
 }
