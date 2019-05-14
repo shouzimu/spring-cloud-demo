@@ -16,7 +16,6 @@
         <module>order-provider-service</module>
         <module>user-ui</module>
         <module>api-gateway</module>
-        <module>order-provider-service</module>
         <module>order-customer-service</module>
     </modules>
 
