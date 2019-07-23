@@ -2,7 +2,6 @@ package com.dh.cloud.order.controller;
 
 import com.dh.cloud.order.model.Order;
 import com.dh.cloud.order.service.OrderService;
-import com.netflix.discovery.converters.Auto;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,9 +9,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/order")
@@ -45,6 +46,12 @@ public class OrderController {
         List<Order> orders = orderService.listByUserId(userId);
         log.info("listByIds Order: {}", orders.size());
         return orders;
+    }
+
+
+    @PostMapping("uploadFile")
+    public String uploadFile(@RequestParam("file") MultipartFile file){
+        return file.getOriginalFilename();
     }
 
 }

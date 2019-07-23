@@ -2,6 +2,7 @@ server:
   port: 8082
 
 eureka:
+  hostname: order-provider
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
